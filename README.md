@@ -31,4 +31,4 @@ If you use BoxVIS in your research or wish to refer to the baseline results publ
 
 ## Acknowledgement
 
-Our code is largely based on [Detectron2](https://github.com/facebookresearch/detectron2), [IFC](https://github.com/sukjunhwang/IFC), [Deformable DETR](https://github.com/fundamentalvision/Deformable-DETR) and [VITA](https://github.com/sukjunhwang/VITA). We are truly grateful for their excellent work.
+Our code is largely based on [Detectron2](https://github.com/facebookresearch/detectron2), [Mask2Former](https://github.com/facebookresearch/Mask2Former), [MinVIS](https://github.com/NVlabs/MinVIS), and [VITA](https://github.com/sukjunhwang/VITA). We are truly grateful for their excellent work.
