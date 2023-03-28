@@ -21,11 +21,13 @@
 If you use BoxVIS in your research or wish to refer to the baseline results published in the Model Zoo, please use the following BibTeX entry.
 
 ```BibTeX
-@inproceedings{li2022boxvis,
-  title={BoxVIS: Video Instance Segmentation with Box Annotation},
-  author={Minghan Li and Zhang Lei},
-  journal={.},
-  year={2023}
+@misc{li2023boxvis,
+      title={BoxVIS: Video Instance Segmentation with Box Annotations}, 
+      author={Minghan Li and Lei Zhang},
+      year={2023},
+      eprint={2303.14618},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
