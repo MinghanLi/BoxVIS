@@ -1,19 +1,19 @@
 # BoxVIS: Video Instance Segmentation with Box Annotation
 
-[LI Minghan](https://scholar.google.com/citations?user=LhdBgMAAAAAJ) and [ZHANG Lei](https://www4.comp.polyu.edu.hk/~cslzhang/)
+[Minghan LI](https://scholar.google.com/citations?user=LhdBgMAAAAAJ) and [Lei ZHANG](https://www4.comp.polyu.edu.hk/~cslzhang/)
 
-[[`arXiv`]()] 
+[[`arXiv`](https://arxiv.org/abs/2303.14618)] 
 
 <div align="center">
-  <img src="imgs/BoxVIS_overview.jpg" width="100%" height="100%"/>
+  <img src="imgs/BoxVIS_overview.jpg" width="80%" height="100%"/>
 </div><br/>
 
 ## Updates
 * **`March 28, 2023`:** Paper is available now. 
 
-## Quantitative performance comparison between pixel-supervised and box-supervised methods 
+## Quantitative performance comparison 
 <div align="center">
-  <img src="imgs/sota_yt21_coco.jpg" width="100%" height="100%"/>
+  <img src="imgs/sota_yt21_coco.jpg" width="80%" height="100%"/>
 </div><br/>
 
 ## <a name="CitingBoxVIS"></a>Citing BoxVIS
