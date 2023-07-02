@@ -1,15 +1,36 @@
-# BoxVIS: Video Instance Segmentation with Box Annotation
+# [BoxVIS](https://arxiv.org/abs/2303.14618): Video Instance Segmentation with Box Annotation
 
 [Minghan LI](https://scholar.google.com/citations?user=LhdBgMAAAAAJ) and [Lei ZHANG](https://www4.comp.polyu.edu.hk/~cslzhang/)
 
-[[`arXiv`](https://arxiv.org/abs/2303.14618)] 
+[[arXiv]](https://arxiv.org/abs/2303.14618)
 
 <div align="center">
   <img src="imgs/BoxVIS_overview.jpg" width="80%" height="100%"/>
 </div><br/>
 
 ## Updates
-* **`March 28, 2023`:** Paper is available now. 
+* **`June 30, 2023`:** Code and trained models are available now.
+* **`March 28, 2023`:** Paper is available now.
+
+
+## Installation
+See [installation instructions](INSTALL.md).
+
+## Datasets
+See [Datasets preparation](./datasets/README.md).
+
+## Getting Started
+We provide a script `train_net_boxvis.py`, that is made to train all the configs provided in BoxVIS.
+
+Training: download [pretrained weights of Mask2Former](https://github.com/facebookresearch/Mask2Former/blob/main/MODEL_ZOO.md) and save it into the path 'pretrained/*.pth', then run:
+```
+sh run.sh
+```
+
+Inference: download [trained weights](https://drive.google.com/drive/folders/1xy2whEG-Dw40GOunhjqz2SzGviAug7qd?usp=sharing), and save it into the path 'pretrained/*.pth', then run:
+```
+sh test.sh
+```
 
 ## Quantitative performance comparison 
 <div align="center">

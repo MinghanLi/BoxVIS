@@ -1,0 +1,66 @@
+_BASE_: Base-BoxVIS.yaml
+MODEL:
+  BACKBONE:
+    NAME: "D2SwinTransformer"
+  SWIN:
+    EMBED_DIM: 192
+    DEPTHS: [ 2, 2, 18, 2 ]
+    NUM_HEADS: [ 6, 12, 24, 48 ]
+    WINDOW_SIZE: 12
+    APE: False
+    DROP_PATH_RATE: 0.3
+    PATCH_NORM: True
+    PRETRAIN_IMG_SIZE: 384
+  MASK_FORMER:
+    NUM_OBJECT_QUERIES: 200
+  WEIGHTS: "pretrained/model_final_e5f453.pkl"
+  META_ARCHITECTURE: "BoxVIS_VideoMaskFormer"
+DATASETS:
+  DATASET_RATIO: [2., 1., 1.]
+  TRAIN: ("ytvis_2021_train", "ovis_train", "coco2bvisd_train")
+  TEST: ("bvisd_dev", )
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.0001
+  STEPS: (28000,)
+  MAX_ITER: 32000
+  WARMUP_FACTOR: 1.0
+  WARMUP_ITERS: 10
+  WEIGHT_DECAY: 0.05
+  OPTIMIZER: "ADAMW"
+  BACKBONE_MULTIPLIER: 0.1
+  CLIP_GRADIENTS:
+    ENABLED: True
+    CLIP_TYPE: "full_model"
+    CLIP_VALUE: 0.01
+    NORM_TYPE: 2.0
+INPUT:
+  SAMPLING_FRAME_NUM: 3
+  SAMPLING_FRAME_RANGE: 10
+  SAMPLING_FRAME_SHUFFLE: False
+  # MIN_SIZE_TRAIN_SAMPLING : ["range", "choice", "range_by_clip", "choice_by_clip"]
+  MIN_SIZE_TRAIN_SAMPLING: "choice_by_clip"
+  # RANDOM_FLIP : ["none", "horizontal", "flip_by_clip"]. "horizontal" is set by default.
+  RANDOM_FLIP: "flip_by_clip"
+  AUGMENTATIONS: []
+  MIN_SIZE_TRAIN: (320, 352, 384, 416, 448, 480, 512)
+  MAX_SIZE_TRAIN: 800
+  MIN_SIZE_TEST: 360
+  FORMAT: "RGB"
+  CROP:
+    ENABLED: False
+    TYPE: "absolute_range"
+    SIZE: (384, 600)
+  # For pseudo videos
+  PSEUDO:
+    AUGMENTATIONS: ['rotation']
+    MIN_SIZE_TRAIN: (320, 352, 384, 416, 448, 480, 512)
+    MAX_SIZE_TRAIN: 800
+    CROP:
+      ENABLED: True
+      TYPE: "absolute_range"
+      SIZE: (320, 480)
+DATALOADER:
+  FILTER_EMPTY_ANNOTATIONS: True
+  NUM_WORKERS: 4
+OUTPUT_DIR: output/bvisd/boxvis_swinl_bs8/

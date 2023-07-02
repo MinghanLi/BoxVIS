@@ -1,0 +1,9 @@
+_BASE_: boxvis_swinl_bs8.yaml
+MODEL:
+  WEIGHTS: 'pretrained/boxvis_swinl.pth'
+DATASETS:
+  TEST: ("ytvis_2021_dev", )
+INPUT:
+  MIN_SIZE_TEST: 360
+OUTPUT_DIR: output/bvisd/boxvis_swinl_bs8_test_ytvis21/
+

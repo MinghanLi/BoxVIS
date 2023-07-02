@@ -1,0 +1,11 @@
+_BASE_: boxvis_swinl_bs8.yaml
+MODEL:
+  WEIGHTS: 'pretrained/boxvis_swinl.pth'
+  BoxVIS:
+    TEST:
+      WINDOW_INFERENCE: True
+      TRACKER_TYPE: 'mdqe'
+DATASETS:
+  TEST: ("bvisd_dev", )
+OUTPUT_DIR: output/bvisd/boxvis_swinl_bs8_test_bvisd/
+
