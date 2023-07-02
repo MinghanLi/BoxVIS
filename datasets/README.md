@@ -7,6 +7,7 @@ $datasets/
   ytvis_2019/
   ytvis_2021/
   ovis/
+  bvisd/
 ```
 `./datasets` relative to your current working directory.
 
@@ -17,6 +18,7 @@ $datasets/
 coco/
   annotations/
     instances_{train,val}2017.json
+    coco2bvisd_train.json (converted)
     {train,val}2017/
     # image files that are mentioned in the corresponding json
 ```
