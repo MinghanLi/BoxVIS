@@ -9,6 +9,7 @@
 </div><br/>
 
 ## Updates
+* **`July 13, 2023`:** Paper has been updated. 
 * **`June 30, 2023`:** Code and trained models are available now.
 * **`March 28, 2023`:** Paper is available now.
 
