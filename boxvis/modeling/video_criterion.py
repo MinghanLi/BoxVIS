@@ -282,7 +282,7 @@ class BoxVISVideoSetCriterion(nn.Module):
             self.enable_box_center_shifting = False
             self.pixel_offsets = torch.as_tensor([[0, d, 0], [0, 0, d]]).reshape(-1, 3)
         elif boxvis_pairwise_num_stpair == 4:
-            self.enable_patch_corr = True
+            self.enable_patch_corr = False
             self.enable_box_center_shifting = False
             self.pixel_offsets = torch.as_tensor([[0, d, 0], [0, 0, d], [0, -d, d], [0, d, d]]).reshape(-1, 3)
         elif boxvis_pairwise_num_stpair == 5:
@@ -291,7 +291,7 @@ class BoxVISVideoSetCriterion(nn.Module):
             self.pixel_offsets = torch.as_tensor([[0, d, 0], [0, 0, d],
                                                   [1, 0, 0], [1, d, 0], [1, 0, d]]).reshape(-1, 3)
         elif boxvis_pairwise_num_stpair == 7:
-            self.enable_patch_corr = False
+            self.enable_patch_corr = True
             self.enable_box_center_shifting = True
             self.pixel_offsets = torch.as_tensor([[0, d, 0], [0, 0, d],
                                                   [1, 0, 0], [1, d, 0], [1, 0, d], [1, -d, 0], [1, 0, -d]]
